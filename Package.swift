@@ -5,9 +5,9 @@ let pkg = Package(
     name: "SwiftGenius",
 
     platforms: [
-        .iOS(.v15),
-        .tvOS(.v14),
-        .macOS(.v12)
+        .iOS(.v17),
+        // .tvOS(.v14),
+        // .macOS(.v12)
     ],
 
     products: [
@@ -17,14 +17,14 @@ let pkg = Package(
         )
     ],
 
-    dependencies: [
-        .package(url: "https://github.com/jrtibbetts/Stylobate.git",
-                 .branch("main"))
-    ],
+    // dependencies: [
+    //     .package(url: "https://github.com/jrtibbetts/Stylobate.git",
+    //              .branch("main"))
+    // ],
 
     targets: [
         .target(name: "SwiftGenius",
-                dependencies: ["Stylobate"],
+                // dependencies: ["Stylobate"],
                 path: "Sources",
                 resources: [
                     .copy("MockImplementation/JSON/get-account-200.json"),
